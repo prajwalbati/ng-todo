@@ -25,9 +25,3 @@
     font-size: 18px;
     margin-right: 5px;
 }
-
-.ToDoItem-Delete:hover {
-    box-shadow: none;
-    margin-top: 1px;
-    margin-left: 1px;
-}

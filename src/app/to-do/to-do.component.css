@@ -9,7 +9,7 @@
 .ToDo {
   text-align: center;
   border: 1px solid white;
-  width: 80vw;
+  width: 60vw;
   height: auto;
   box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.5);
   background: #f6f6f6;
@@ -30,27 +30,24 @@
   color: white;
   font-size: 2em;
   width: 1.5em;
-  height: 1.5em;
+  height: 1.3em;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*padding: 15px;*/
   cursor: pointer;
-  background: #73ff73;
+  background: #33aa73;
   border-radius: 10px;
   box-shadow: 1px 1px 1px #47a947;
   margin: 20px auto 0;
 }
 
-.ToDo-Add:hover {
-  box-shadow: none;
-  margin-top: 21px;
-  margin-left: calc(auto + 1px);
-}
-
 .ToDo-Container {
   width: 80%;
   margin: 0 auto;
+}
+
+.requiredError {
+  color: #a55;
 }
 
 input {
