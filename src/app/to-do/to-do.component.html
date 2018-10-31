@@ -1,5 +1,4 @@
 <div class="ToDo">
-    <img class="Logo" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
     <h1 class="ToDo-Header">To Do App With Angular</h1>
     <div class="ToDo-Container">
         <div class="ToDo-Content">
@@ -10,10 +9,7 @@
         <!-- see https://stackblitz.com/angular/lypmnogevxa?file=src%2Fapp%2Fhero-form%2Fhero-form.component.html for a more in depth ng-form example -->
         <form (ngSubmit)="addItem()" #todoForm="ngForm">
             <div class="form-group">
-                <input type="text" class="form-control" id="name"
-                required
-                [(ngModel)]="Input" name="name"
-                #name="ngModel">
+                <input type="text" class="form-control" id="name" [(ngModel)]="Input" name="name" #name="ngModel" placeholder="Add Task" required>
 
                 <button type="submit" class="ToDo-Add">+</button>
                 <div class="requiredError" [hidden]="ShouldBeHidden(name.valid, name.pristine, Submitted)">
