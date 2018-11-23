@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ToDo } from "./to-do";
 
 @Component({
-    selector: "ToDo", // default:'app-to-do',
+    selector: "ToDo",
     templateUrl: "./to-do.component.html",
     styleUrls: ["./to-do.component.css"]
 })
@@ -18,7 +18,6 @@ export class ToDoComponent implements OnInit {
     ngOnInit() {}
 
     deleteItem(i: number) {
-        //note delete doesn't work: https://stackoverflow.com/a/40462431/2653503
         this.ToDos.splice(i, 1);
     }
 

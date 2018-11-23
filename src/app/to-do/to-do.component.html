@@ -1,21 +1,20 @@
 <div class="ToDo">
-    <h1 class="ToDo-Header">To Do App With Angular</h1>
+    <h1 class="ToDo-Header">Todo App</h1>
     <div class="ToDo-Container">
-        <div class="ToDo-Content">
-            <div *ngFor="let ToDo of ToDos; index as i" >
-                <ToDoItem [ToDo]="ToDo" (Deleted)="deleteItem(i)"></ToDoItem>
-            </div>
-        </div>
-        <!-- see https://stackblitz.com/angular/lypmnogevxa?file=src%2Fapp%2Fhero-form%2Fhero-form.component.html for a more in depth ng-form example -->
         <form (ngSubmit)="addItem()" #todoForm="ngForm">
-            <div class="form-group">
+            <div class="form-group todoInput">
                 <input type="text" class="form-control" id="name" [(ngModel)]="Input" name="name" #name="ngModel" placeholder="Add Task" required>
 
-                <button type="submit" class="ToDo-Add">+</button>
+                <a type="submit" class="ToDo-Add" (click)="addItem()">+</a>
                 <div class="requiredError" [hidden]="ShouldBeHidden(name.valid, name.pristine, Submitted)">
                     Name is required
                 </div>
             </div>
         </form>
+        <div class="ToDo-Content">
+            <div *ngFor="let ToDo of ToDos; index as i" >
+                <ToDoItem [ToDo]="ToDo" (Deleted)="deleteItem(i)"></ToDoItem>
+            </div>
+        </div>
     </div>
 </div>
