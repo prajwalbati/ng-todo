@@ -10,6 +10,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
 import { AuthService } from "./shared/services/auth.service";
+import { TodoService } from "./shared/services/todo.service";
 
 import { AppComponent } from "./app.component";
 import { ToDoComponent } from "./to-do/to-do.component";
@@ -25,7 +26,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
   imports: [AppRoutingModule, BrowserModule, FormsModule, AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule],
-  providers: [AuthService],
+  providers: [AuthService, TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

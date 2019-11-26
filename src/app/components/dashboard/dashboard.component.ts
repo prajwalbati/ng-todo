@@ -11,7 +11,6 @@ export class DashboardComponent implements OnInit {
   constructor(public authService: AuthService) { }
 
   ngOnInit() {
-    console.log("here it is");
   }
 
 }

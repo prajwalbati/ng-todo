@@ -83,6 +83,12 @@ export class AuthService {
     return (user !== null && user.emailVerified !== false) ? true : false;
   }
 
+  getUserDetails() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    console.log(user);
+    return user;
+  }
+
   // Sign in with Google
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider());

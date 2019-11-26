@@ -7,7 +7,16 @@ const data = require('../../env.json');
 
 export const environment = {
   production: false,
-  firebaseConfig : data.firebaseConfig
+  firebaseConfig : {
+    "apiKey": "AIzaSyDFEUwijFSCk7eOILnU9gCBiZW6ssuEdZw",
+    "authDomain": "todo-app-1eba8.firebaseapp.com",
+    "databaseURL": "https://todo-app-1eba8.firebaseio.com",
+    "projectId": "todo-app-1eba8",
+    "storageBucket": "todo-app-1eba8.appspot.com",
+    "messagingSenderId": "202617366482",
+    "appId": "1:202617366482:web:59aae4d460f9f2fc5c0a0b",
+    "measurementId": "G-3E5SYJ4W4H"
+  }
 };
 
 /*
