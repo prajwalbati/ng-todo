@@ -12,7 +12,7 @@ import { TodoService } from "../shared/services/todo.service";
 export class ToDoComponent implements OnInit {
     constructor(private todoService: TodoService, private authService: AuthService) {}
 
-    ToDos: ToDo[];
+    ToDos:any = [];
 
     Input: string = "";
 
@@ -23,19 +23,25 @@ export class ToDoComponent implements OnInit {
     }
 
     getTodos() {
-        this.todoService.getTodos().subscribe(res => {console.log(res);
+        this.todoService.getTodos().subscribe(res => {
           let coffeeOrdersData = res.map(coffeeData => {
             let customData = coffeeData.payload.doc.data();
             customData["id"] = coffeeData.payload.doc.id;
             return customData;
           });
           // this.ToDos = orderBy(coffeeOrdersData, ['createdDate'], ['desc']);
+          console.log(coffeeOrdersData);
           this.ToDos = coffeeOrdersData;
         });
     }
 
-    deleteItem(i: number) {
-        this.ToDos.splice(i, 1);
+    deleteItem(id) {
+        // this.ToDos.splice(i, 1);
+        this.todoService.removeTodo(id).then(res => {console.log(res);
+          // this.hasMessage = true;
+          // this.errors = ["Order submitted successfully"];
+          // this.resetForm();
+        });
     }
 
     addItem() {

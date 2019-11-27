@@ -6,7 +6,8 @@ declare var require: any;
 const data = require('../../env.json');
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig : data.firebaseConfig
 };
 
 /*

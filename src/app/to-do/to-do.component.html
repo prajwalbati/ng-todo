@@ -13,7 +13,7 @@
         </form>
         <div class="ToDo-Content">
             <div *ngFor="let ToDo of ToDos; index as i" >
-                <ToDoItem [ToDo]="ToDo" (Deleted)="deleteItem(i)"></ToDoItem>
+                <ToDoItem [ToDo]="ToDo" (Deleted)="deleteItem(ToDo.id)"></ToDoItem>
             </div>
         </div>
     </div>

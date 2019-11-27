@@ -9,13 +9,13 @@ import { ToDo } from "../to-do";
 export class ToDoItemComponent implements OnInit {
     constructor() {}
 
-    @Input() ToDo: ToDo = new ToDo("");
+    @Input() ToDo;
 
     @Output() Deleted: EventEmitter<any> = new EventEmitter();
 
     ngOnInit() {}
 
-    deleteItem() {
-        this.Deleted.emit();
+    deleteItem(id) {
+        this.Deleted.emit(id);
     }
 }

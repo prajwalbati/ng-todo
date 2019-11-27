@@ -20,7 +20,6 @@ export class TodoService {
 
   getTodos() {
     let userDetails = this.authService.getUserDetails();
-    console.log(userDetails.uid);
     return this.firestore.collection("todo", ref => ref.where('user', '==', userDetails.uid)).snapshotChanges();
   }
 
@@ -31,10 +30,10 @@ export class TodoService {
        .set({ isCompleted: data.isCompleted }, { merge: true });
   }
 
-  removeTodo(data) {
+  removeTodo(id) {
     return this.firestore
        .collection("todo")
-       .doc(data.id)
+       .doc(id)
        .delete();
   }
 
