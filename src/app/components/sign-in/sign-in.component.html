@@ -2,58 +2,60 @@
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
-      <div class="displayTable">
-        <div class="displayTableCell">
-
-          <div class="authBlock">
-            <h3>Sign In</h3>
-            <div class="formGroup">
-              <input type="text" class="formControl" placeholder="Username" #userName required>
+      <div class="wrapper">
+        <div class="authBlock">
+          <h2 class="text-center">Login</h2>
+          <div class="form">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="text" class="form-control" placeholder="Username" #userName required>
+              </div>
             </div>
 
-            <div class="formGroup">
-              <input type="password" class="formControl" placeholder="Password" #userPassword required>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="password" class="form-control" placeholder="Password" #userPassword required>
+              </div>
             </div>
 
-            <!-- Calling SignIn Api from AuthService -->
-            <div class="formGroup">
-              <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+            <div class="form-group text-right forgetPassword">
+              <div class="col-sm-12">
+                <a routerLink="/forgot-password" class="text-secondary">Forgot Password?</a>
+              </div>
             </div>
 
-            <div class="formGroup">
-              <span class="or"><span class="orInner">Or</span></span>
+              <!-- Calling SignIn Api from AuthService -->
+            <div class="form-group">
+              <div class="col-sm-12">
+                <button type="button" class="btn btn-primary loginBtn" (click)="authService.SignIn(userName.value, userPassword.value)">LOGIN</button>
+              </div>
             </div>
 
-            <!-- Calling GoogleAuth Api from AuthService -->
-            <div class="formGroup">
-              <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-                <i class="fab fa-google-plus-g"></i>
-                Log in with Google
-              </button>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <hr class="float-left">
+                <span class="or">or</span>
+                <hr class="float-right">
+              </div>
             </div>
 
-            <div class="forgotPassword">
-              <span routerLink="/forgot-password">Forgot Password?</span>
+            <div class="form-group">
+              <div class="col-sm-12 text-center">
+                <!-- Calling GoogleAuth Api from AuthService -->
+                <a class="loginWithGoogle text-secondary text-center" href="#" (click)="authService.GoogleAuth()">
+                  <i class="fab fa-google"></i>   Log in with Google
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div class="redirectToLogin">
-            <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+            <div class="form-group createAccountDiv">
+              <div class="col-sm-12 text-center">
+                <span>Don't have an account? </span><a class="redirect" routerLink="/register-user"> Create Account</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-sm-4"></div>
-  </div>
-</div>
-
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4">
-
     </div>
     <div class="col-sm-4"></div>
   </div>

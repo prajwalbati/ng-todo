@@ -1,0 +1,37 @@
+.wrapper {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top:80px;
+  padding: 30px;
+}
+
+.authBlock h2 {
+  margin: 30px 0;
+}
+
+.authBlock .form {
+  margin: 30px -20px;
+}
+
+.forgetPassword {
+    font-size: 13px;
+}
+
+.loginBtn {
+  width: 100%;
+}
+
+.authBlock hr {
+  width: 40%;
+}
+
+.authBlock span.or {
+  padding: 7%;
+}
+
+.createAccountDiv {
+  margin: 40px 0 0px;
+  font-size: 15px;
+}
