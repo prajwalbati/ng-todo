@@ -1,16 +1,24 @@
 <div class="ToDo">
-    <h1 class="ToDo-Header">Todo App</h1>
-    <div class="ToDo-Container">
-        <form (ngSubmit)="addItem()" #todoForm="ngForm">
-            <div class="form-group todoInput">
-                <input type="text" class="form-control" id="name" [(ngModel)]="Input" name="name" #name="ngModel" placeholder="Add Task" required>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="ToDo-Header float-left">Todo List</h1>
+            <button class="btn btn-primary float-right" (click)="addNew=!addNew">New TODO</button>
+        </div>
+    </div>
 
-                <a type="submit" class="ToDo-Add" (click)="addItem()">+</a>
-                <div class="requiredError" [hidden]="ShouldBeHidden(name.valid, name.pristine, Submitted)">
-                    Name is required
+    <div class="row">
+        <div class="addTodoWrapper" *ngIf="addNew">
+            <form (ngSubmit)="addItem()" #todoForm="ngForm">
+                <div class="form-group todoInput">
+                    <input type="text" class="form-control" id="name" [(ngModel)]="Input" name="name" #name="ngModel" placeholder="Add Task" required>
+
+                    <a type="submit" class="ToDo-Add" (click)="addItem()">+</a>
+                    <div class="requiredError" [hidden]="ShouldBeHidden(name.valid, name.pristine, Submitted)">
+                        Name is required
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
         <div class="ToDo-Content">
             <div *ngFor="let ToDo of ToDos; index as i" >
                 <ToDoItem [ToDo]="ToDo" (Deleted)="deleteItem(ToDo.id)"></ToDoItem>

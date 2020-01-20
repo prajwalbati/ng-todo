@@ -1,20 +1,19 @@
 .ToDo {
   font-family: Helvetica, Arial, sans-serif;
-  text-align: center;
+  /*text-align: center;*/
   border: 1px solid white;
-  width: 40vw;
-  height: auto;
-  box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.5);
-  background: #f6f6f6;
+  /*width: 40vw;*/
+  /*height: auto;*/
+  /*box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.5);*/
+  /*background: #f6f6f6;*/
+  padding: 40px 20px;
   padding-bottom: 60px;
-  margin: 40px auto;
 }
 
 .ToDo-Header {
   color: #f99543;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 70px auto 30px;
 }
 
 .ToDo-Container {

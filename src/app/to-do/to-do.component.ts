@@ -17,6 +17,7 @@ export class ToDoComponent implements OnInit {
     Input: string = "";
 
     Submitted: boolean = false;
+    addNew: boolean = false;
 
     ngOnInit() {
         this.getTodos();

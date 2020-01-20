@@ -1,7 +1,37 @@
+body {
+  background: #f8f9ff !important;
+}
+
 main {
   margin-top: 50px;
 }
 
+.navbar {
+  padding: 12px 0;
+  border-bottom: 2px solid #757c82;
+  background: linear-gradient(to left, #9ed6f8, #4b86d0);
+}
+
 .navbar .dasboard-text {
   color: #FFF;
+  font-size: 24px;
+}
+
+.signout .dasboard-text {
+  font-size: 16px;
+  color: #333;
+}
+.signout i {
+  font-size: 16px;
+  color: #333;
+}
+.wrapper {
+  background: #f8f9ff;
+  margin-top: 70px;
+  height: 100vh;
+}
+
+.sidebar {
+  padding: 30px 15px;
+  border-left: 1px solid #97cef4;
 }
